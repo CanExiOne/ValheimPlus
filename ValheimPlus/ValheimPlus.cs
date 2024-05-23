@@ -22,7 +22,7 @@ namespace ValheimPlus
     public class ValheimPlusPlugin : BaseUnityPlugin
     {
         // Version used when numeric is required (assembly info, bepinex, System.Version parsing).
-        public const string numericVersion = "0.9.11.0";
+        public const string numericVersion = "0.9.13.0";
 
         // Extra version, like alpha/beta/rc/stable. Can leave blank if a stable release.
         public const string versionExtra = "";
@@ -34,10 +34,10 @@ namespace ValheimPlus
         public const string minRequiredNumericVersion = numericVersion;
 
         // The lowest game version this version of V+ is known to work with.
-        public static readonly GameVersion minSupportedGameVersion = new GameVersion(0, 217, 28);
+        public static readonly GameVersion minSupportedGameVersion = new GameVersion(0, 218, 11);
 
         // The game version this version of V+ was compiled against.
-        public static readonly GameVersion targetGameVersion = new GameVersion(0, 217, 29);
+        public static readonly GameVersion targetGameVersion = new GameVersion(0, 218, 15);
 
         public static string newestVersion = "";
         public static bool isUpToDate = false;
@@ -71,6 +71,7 @@ namespace ValheimPlus
         {
             Logger = base.Logger;
             Logger.LogInfo($"Valheim Plus full version: {fullVersion}");
+            Logger.LogInfo($"Valheim Plus dll file location: '{GetType().Assembly.Location}'");
             Logger.LogInfo("Trying to load the configuration file");
 
             if (ConfigurationExtra.LoadSettings() != true)

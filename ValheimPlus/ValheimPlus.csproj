@@ -16,6 +16,7 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <TargetFrameworkProfile />
+    <LangVersion>9</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -409,6 +410,7 @@
     <Compile Include="GameClasses\CharacterDrop.cs" />
     <Compile Include="GameClasses\Demister.cs" />
     <Compile Include="GameClasses\LuredWisp.cs" />
+    <Compile Include="GameClasses\PickableItem.cs" />
     <Compile Include="GameClasses\SEMan.cs" />
     <Compile Include="GameClasses\Talker.cs" />
     <Compile Include="GameClasses\Container.cs" />
@@ -477,8 +479,6 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Assets\logo.png" />
-    <EmbeddedResource Include="Assets\ZapHosting.png" />
-    <EmbeddedResource Include="Assets\ZapHosting_hover.png" />
     <Content Include="FodyWeavers.xml" />
   </ItemGroup>
   <ItemGroup />
